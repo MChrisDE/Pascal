@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 def binom(n, k):
     if 0 <= k <= n:
         ntok = 1
@@ -11,6 +12,7 @@ def binom(n, k):
         return ntok // ktok
     else:
         return 0
+
 
 def generator(zeilen):
     array = []
@@ -26,14 +28,13 @@ master = Tk()
 master.wm_title("pascalsches dreiecke".title())
 cheight = 600
 cwidth = 600
-canvas = Canvas(master, height=cheight, width=cwidth,bg="white")
+canvas = Canvas(master, height=cheight, width=cwidth, bg="white")
 
 ausgabe = generator(10)
 tempheight = 30
 for row in ausgabe:
-
     print(row)
-    tempwidth = (cwidth/2)-((len(row)-1)*50/2)
+    tempwidth = (cwidth / 2) - ((len(row) - 1) * 50 / 2)
     for c_in_row in row:
         print(c_in_row)
         canvas.create_rectangle(tempwidth - 25, tempheight - 25, tempwidth + 25, tempheight + 25, fill="white")
