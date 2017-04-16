@@ -40,6 +40,8 @@ for row in ausgabe:
         canvas.create_rectangle(tempwidth - 25, tempheight - 25, tempwidth + 25, tempheight + 25, fill="white")
         canvas.create_text(tempwidth, tempheight, text=c_in_row, font=("Century Gothic", 30))
         # TODO: ICH-hab-bock-auf-klassen
+        # TODO: Ich auch
+        # TODO Dann lass das morgen machen
         tempwidth += 50
     tempheight += 50
 canvas.pack()
