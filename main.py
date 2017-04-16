@@ -41,6 +41,7 @@ for row in ausgabe:
         canvas.create_text(tempwidth, tempheight, text=c_in_row, font=("Century Gothic", 30))
         # TODO: ICH-hab-bock-auf-klassen
         # TODO: Ich auch
+        # TODO Dann lass das morgen machen
         tempwidth += 50
     tempheight += 50
 canvas.pack()
