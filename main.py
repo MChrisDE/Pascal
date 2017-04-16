@@ -25,7 +25,7 @@ def generator(zeilen):
 
 
 master = Tk()
-master.wm_title("pascalsches dreiecke".title())
+master.wm_title("pascalsche dreiecke".title())
 cheight = 600
 cwidth = 600
 canvas = Canvas(master, height=cheight, width=cwidth, bg="white")
