@@ -25,7 +25,7 @@ def generator(zeilen):
 
 
 master = Tk()
-master.wm_title("pascalsches dreiecke".title())
+master.wm_title("pascalsche dreiecke".title())
 cheight = 600
 cwidth = 600
 canvas = Canvas(master, height=cheight, width=cwidth, bg="white")
@@ -40,6 +40,7 @@ for row in ausgabe:
         canvas.create_rectangle(tempwidth - 25, tempheight - 25, tempwidth + 25, tempheight + 25, fill="white")
         canvas.create_text(tempwidth, tempheight, text=c_in_row, font=("Century Gothic", 30))
         # TODO: ICH-hab-bock-auf-klassen
+        # TODO: Ich auch
         tempwidth += 50
     tempheight += 50
 canvas.pack()
