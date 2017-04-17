@@ -1,5 +1,7 @@
 from tkinter import *
 
+from solution_brick import Brick
+
 
 def binom(n, k):
     if 0 <= k <= n:
@@ -24,25 +26,23 @@ def generator(zeilen):
         array = []
 
 
+size = 10
+
+
 master = Tk()
 master.wm_title("pascalsche dreiecke".title())
-cheight = 600
-cwidth = 600
+cheight = (size + 1) * 51
+cwidth = (size + 1) * 51
 canvas = Canvas(master, height=cheight, width=cwidth, bg="white")
 canvas.pack()
 
-ausgabe = generator(10)
+ausgabe = generator(size)
 tempheight = 30
 for row in ausgabe:
     print(row)
     tempwidth = (cwidth / 2) - ((len(row) - 1) * 50 / 2)
-    for c_in_row in row:
-        print(c_in_row)
-        canvas.create_rectangle(tempwidth - 25, tempheight - 25, tempwidth + 25, tempheight + 25, fill="white")
-        canvas.create_text(tempwidth, tempheight, text=c_in_row, font=("Roboto", 30))
-        # TODO: ICH-hab-bock-auf-klassen
-        # TODO: Ich auch
-        # TODO Dann lass das morgen machen
+    for brick_text in row:
+        Brick(canvas, brick_text, tempwidth, tempheight)
         tempwidth += 50
     tempheight += 50
 mainloop()
