@@ -29,6 +29,7 @@ master.wm_title("pascalsche dreiecke".title())
 cheight = 600
 cwidth = 600
 canvas = Canvas(master, height=cheight, width=cwidth, bg="white")
+canvas.pack()
 
 ausgabe = generator(10)
 tempheight = 30
@@ -38,11 +39,10 @@ for row in ausgabe:
     for c_in_row in row:
         print(c_in_row)
         canvas.create_rectangle(tempwidth - 25, tempheight - 25, tempwidth + 25, tempheight + 25, fill="white")
-        canvas.create_text(tempwidth, tempheight, text=c_in_row, font=("Century Gothic", 30))
+        canvas.create_text(tempwidth, tempheight, text=c_in_row, font=("Roboto", 30))
         # TODO: ICH-hab-bock-auf-klassen
         # TODO: Ich auch
         # TODO Dann lass das morgen machen
         tempwidth += 50
     tempheight += 50
-canvas.pack()
 mainloop()
